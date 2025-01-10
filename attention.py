@@ -1,13 +1,12 @@
 import torch
 import math
 torch.manual_seed(42)
-input_dim=3
 input_len=4
 n_dim=2
-I=torch.rand(input_len,input_dim)
-W_Q=torch.rand(input_dim,n_dim)
-W_K=torch.rand(input_dim,n_dim)
-W_V=torch.rand(input_dim,n_dim)
+I=torch.rand(input_len,n_dim)
+W_Q=torch.rand(n_dim,n_dim)
+W_K=torch.rand(n_dim,n_dim)
+W_V=torch.rand(n_dim,n_dim)
 Q=I@W_Q
 K=I@W_K
 V=I@W_V
